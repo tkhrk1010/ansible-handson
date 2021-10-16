@@ -1,0 +1,6 @@
+- hosts: target
+  tasks:
+  - name: "sample"
+    shell: |
+        touch hoge.txt
+        echo "hogehoge" >> hoge.txt

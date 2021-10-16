@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+
+  ansible:
+    build:
+      context: ./ansible
+      dockerfile: Dockerfile
+    tty: true
+    working_dir: "/var/data"
+    volumes:
+      - ./ansible:/var/data
+  
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    tty: true
